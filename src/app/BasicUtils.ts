@@ -21,3 +21,13 @@ export function authenticateUser(
     isAuthenticated: authStatus,
   };
 }
+
+export class UsernameToLowercase {
+  public toLower(username: string) {
+    if (username === '') {
+      throw new Error('username cannot be empty');
+    } else {
+      return username.toLowerCase();
+    }
+  }
+}
